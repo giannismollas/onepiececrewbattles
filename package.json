@@ -1,13 +1,15 @@
 {
   "name": "battle-simulation",
   "version": "1.0.0",
-  "description": "",
+  "description": "One Piece RPG Ship VS Ship Multiplayer Battle Simulator",
   "main": "server/index.js",
   "type": "module",
   "scripts": {
+    "postinstall": "npm --prefix client install",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "start": "node server/index.js",
     "server": "node server/index.js",
     "client": "npm --prefix client run dev",
-    "build": "npm --prefix client run build",
     "dev": "node server/index.js",
     "test": "node server/tests/combat.test.js"
   },
